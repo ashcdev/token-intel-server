@@ -1,0 +1,19 @@
+{
+  "name": "token-intel-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch index.ts",
+    "start": "bun run index.ts",
+    "convex:dev": "bunx convex dev",
+    "convex:deploy": "bunx convex deploy"
+  },
+  "dependencies": {
+    "convex": "^1.34.0",
+    "hono": "^4.12.8"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}
