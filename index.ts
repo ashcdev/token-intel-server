@@ -70,9 +70,6 @@ app.post("/webhook", async (c) => {
   console.log(`[webhook] CA: ${ca}`);
 
   // Fire-and-forget — respond immediately, process in background
-  c.executionCtx?.waitUntil?.(processAndStore(ca));
-
-  // For Bun (no executionCtx), just kick off async without awaiting
   processAndStore(ca).catch((e) =>
     console.error(`[error] ${ca}: ${e.message}`)
   );
